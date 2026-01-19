@@ -21,7 +21,8 @@ Docker Compose を利用してローカル環境への影響を最小限に抑�
 リポジトリのルートディレクトリで以下を実行します。
 
 ```bash
-docker compose up --build
+docker compose up --build -d
+docker compose exec api alembic upgrade head
 ```
 
 起動後、以下の URL で API にアクセスできます。
